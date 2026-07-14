@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        AWS_REGION = "ap-south-1"
-        AWS_ACCOUNT_ID = "516311263965"
+        AWS_REGION = "us-east-1"
+        AWS_ACCOUNT_ID = "250935839460"
         ECR_REPO = "web-calculator"
 
         IMAGE = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}"
@@ -18,7 +18,7 @@ pipeline {
         stage('SCM') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/ddevsec-blip/web-calculator.git'
+                url: 'https://github.com/BhavyaAudisri/web-calculator.git'
             }
         }
 

@@ -10,13 +10,13 @@ spec:
   selector:
     matchLabels:
       app: webcalculator
-    template:
-      metadata:
-        labels:
-          app: webcalculator
-spec:
-  containers:
-  - name: webcalculator
-    image: webcalculator:1.0
-    port:
-    - containerPort:8080
+  template:
+    metadata:
+      labels:
+        app: webcalculator
+    spec:
+      containers:
+      - name: webcalculator
+        image: webcalculator:1.0
+        port:
+        - containerPort:8080

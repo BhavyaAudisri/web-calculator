@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: webcalculator
-        image: webcalculator:1.0
+        image: web-calculator:latest
         ports:
           - containerPort: 8080

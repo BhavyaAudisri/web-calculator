@@ -3,7 +3,20 @@ kind: Deployment
 metadata: 
   name: deployment
   namespace: webcalculator
+  labels:
+    app: webcalculator
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webcalculator
+    template:
+      metadata:
+        labels:
+          app: webcalculator
 spec:
   containers:
   - name: webcalculator
     image: webcalculator:1.0
+    port:
+    - containerPort:8080

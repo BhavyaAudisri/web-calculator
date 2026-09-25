@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Deployment
+metadata: 
+  name: deployment
+  namespace: webcalculator
+spec:
+  containers:
+  - name: webcalculator
+    image: webcalculator:1.0
